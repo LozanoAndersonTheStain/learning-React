@@ -1,0 +1,22 @@
+.constaainerHora {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.hora {
+  background-color: blue;
+  color: aquamarine;
+  width: 10rem;
+  height: auto;
+}
+
+.lugar {
+  color: crimson;
+}
+
+.hora {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
