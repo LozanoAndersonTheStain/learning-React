@@ -3,6 +3,7 @@ import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import './App.css'
 import Clock from './components/Clock'
+import Tarjet from './components/Tarjet'
 
 const images = [
   'https://cdn.pixabay.com/photo/2022/09/02/13/35/mountains-7427623_960_720.jpg',
@@ -28,6 +29,7 @@ const App = () => {
         ))}
       </Slide>
       <Clock />
+      <Tarjet />
     </div>
   )
 }
