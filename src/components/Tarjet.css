@@ -1,3 +1,23 @@
+.container {
+  border: 43rem;
+  border-radius: 1rem solid;
+}
+
 .container-tarjet {
-  border: 1rem;
+  width: 13rem;
+  height: auto;
+  margin: 1.5rem;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px #fb4f00;
+}
+
+.imagen {
+  width: 8rem;
+  height: 4rem;
 }
