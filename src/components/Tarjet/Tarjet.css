@@ -1,6 +1,7 @@
 .container {
   border: 43rem;
   border-radius: 1rem solid;
+  display: flex;
 }
 
 .container-tarjet {
