@@ -12,7 +12,7 @@ const Pokemon = () => {
 
   useEffect(() => {
     fetchingPoke()
-  }, [])
+  }, /* [] */)
 
   return (
     <div>
