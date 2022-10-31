@@ -1,13 +1,16 @@
 import React from 'react'
+// import Formulario from './components/Formulario/Formulario'
+// import Listar from './components/Listar/listar'
+// import FormularioSelect from './components/FormularioSelect/FormularioSelect'
+import FormilarioStates from './components/FormularioStates/FormilarioStates'
 
 const App = () => {
-  const showAlert = () => {
-    alert('Hola mundo')
-  }
-
   return (
     <div>
-      <button onClick={showAlert}>Mostrar alerta</button>
+      {/* <Listar /> */}
+      {/* <Formulario /> */}
+      {/* <FormularioSelect /> */}
+      <FormilarioStates />
     </div>
   )
 }
