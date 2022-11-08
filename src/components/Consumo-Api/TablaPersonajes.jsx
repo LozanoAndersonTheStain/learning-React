@@ -1,14 +1,16 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './TablaPersonajes.css'
-
 
 const TablaPersonajes = () => {
   const [personajes, setPersonajes] = useState([])
 
   const fetchPersonajes = async () => {
-    const response = await fetch(`https://rickandmortyapi.com/api/character`)
-    const data = await response.json()
-    setPersonajes(data.results)
+    const response = await axios.get(
+      `https://rickandmortyapi.com/api/character`
+    )
+    // const data = await response.json()
+    setPersonajes(response.data.results)
   }
   useEffect(() => {
     fetchPersonajes()
@@ -16,9 +18,9 @@ const TablaPersonajes = () => {
 
   return (
     <div>
-      <table id="users" className='container-table'>
-        <thead className='container-cabecera'>
-          <tr className='titulos'>
+      <table id="users" className="container-table">
+        <thead className="container-cabecera">
+          <tr className="titulos">
             <th>Name</th>
             <th>Status</th>
             <th>Image</th>
@@ -28,10 +30,10 @@ const TablaPersonajes = () => {
         <tbody>
           {personajes.map((personaje) => (
             <tr key={personaje._id}>
-              <td className='text'>{personaje.name}</td>
-              <td className='status'>{personaje.status}</td>
+              <td className="text">{personaje.name}</td>
+              <td className="status">{personaje.status}</td>
               <td>
-                <img src={personaje.image} alt="" className='image'/>
+                <img src={personaje.image} alt="" className="image" />
               </td>
             </tr>
           ))}
