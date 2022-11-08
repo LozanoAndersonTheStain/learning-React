@@ -1,0 +1,35 @@
+.container-cabecera {
+  background-color: #333;
+  color: white;
+  display: flex;
+}
+
+.container-table {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-between;
+}
+
+.image {
+  border-radius: 30px;
+    width: 12rem;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.status {
+  font-size: 2rem;
+}
+
+.titulos {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
