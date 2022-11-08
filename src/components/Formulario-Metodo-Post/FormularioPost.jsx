@@ -50,7 +50,7 @@ const FormularioPost = () => {
 
         <input
           type="text"
-          placeholder="Ingrese una imagen referente a la noticia"
+          placeholder="Ingrese una imagen"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
