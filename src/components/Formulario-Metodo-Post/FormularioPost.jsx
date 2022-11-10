@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const FormularioPost = () => {
   const [tittle, setTittle] = useState('')
@@ -7,9 +8,34 @@ const FormularioPost = () => {
   const [author, setAuthor] = useState('')
   const [image, setImage] = useState('')
 
-  const showAlert = (e) => {
+  const addNew = async (e) => {
     e.preventDefault()
-    alert(`${tittle} ${author}`)
+
+    const newData = {
+      tittle: tittle,
+      date: date,
+      description: description,
+      author: author,
+      image: image,
+    }
+
+    let headersList = {
+      Accept: '*/*',
+      'User-Agent': 'Thunder Client (https://www.thunderclient.com)',
+      'Content-Type': 'application/json',
+    }
+
+    let bodyContent = JSON.stringify(newData)
+
+    let reqOptions = {
+      url: `https://crudcrud.com/api/${process.env.REACT_APP_KEY_CRUD}/news`,
+      method: 'POST',
+      headers: headersList,
+      data: bodyContent,
+    }
+
+    let response = await axios.request(reqOptions)
+    console.log(response.data)
 
     setTittle('')
     setDate('')
@@ -20,7 +46,7 @@ const FormularioPost = () => {
 
   return (
     <div>
-      <form onSubmit={showAlert}>
+      <form onSubmit={addNew}>
         <input
           type="text"
           placeholder="Ingrese titulo"
